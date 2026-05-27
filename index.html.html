@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dulce Frío - Heladería</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#fff7f2;
+      color:#333;
+    }
+
+    header{
+      background: linear-gradient(135deg, #ff8fab, #ffb3c6);
+      padding:20px;
+      text-align:center;
+      color:white;
+    }
+
+    header h1{
+      font-size:3rem;
+    }
+
+    header p{
+      margin-top:10px;
+      font-size:1.2rem;
+    }
+
+    nav{
+      background:#ff5d8f;
+      padding:15px;
+      text-align:center;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 15px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#ffe066;
+    }
+
+    .hero{
+      height:400px;
+      background:url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=1200&auto=format&fit=crop') center/cover;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+    }
+
+    .hero h2{
+      background:rgba(0,0,0,0.5);
+      padding:20px;
+      border-radius:10px;
+      font-size:2.5rem;
+    }
+
+    .sabores{
+      padding:50px 20px;
+      text-align:center;
+    }
+
+    .sabores h2{
+      margin-bottom:30px;
+      color:#ff4d6d;
+      font-size:2.5rem;
+    }
+
+    .cards{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      width:250px;
+      border-radius:15px;
+      overflow:hidden;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+
+    .card h3{
+      margin:15px 0;
+      color:#ff5d8f;
+    }
+
+    .card p{
+      padding:0 15px 20px;
+    }
+
+    .boton{
+      margin-top:20px;
+      padding:12px 25px;
+      border:none;
+      background:#ff4d6d;
+      color:white;
+      border-radius:30px;
+      cursor:pointer;
+      font-size:1rem;
+      transition:0.3s;
+    }
+
+    .boton:hover{
+      background:#e63956;
+    }
+
+    .mensaje{
+      margin-top:20px;
+      font-size:1.2rem;
+      color:#ff006e;
+      font-weight:bold;
+    }
+
+    footer{
+      background:#ff8fab;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    @media(max-width:768px){
+      .hero h2{
+        font-size:2rem;
+      }
+
+      .cards{
+        flex-direction:column;
+        align-items:center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🍦 Dulce Frío</h1>
+    <p>Los helados más deliciosos de la ciudad</p>
+  </header>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Sabores</a>
+    <a href="#">Promociones</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <section class="hero">
+    <h2>¡Disfruta el sabor del verano!</h2>
+  </section>
+
+  <section class="sabores">
+    <h2>Nuestros Sabores</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=800&auto=format&fit=crop" alt="Chocolate">
+        <h3>Chocolate</h3>
+        <p>Helado cremoso con auténtico cacao.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?q=80&w=800&auto=format&fit=crop" alt="Fresa">
+        <h3>Fresa</h3>
+        <p>Preparado con fresas naturales y crema.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?q=80&w=800&auto=format&fit=crop" alt="Vainilla">
+        <h3>Vainilla</h3>
+        <p>Clásico sabor suave y delicioso.</p>
+      </div>
+
+    </div>
+
+    <button class="boton" onclick="mostrarMensaje()">
+      Ver promoción 🍨
+    </button>
+
+    <div class="mensaje" id="mensaje"></div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 Dulce Frío | Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById("mensaje").innerHTML =
+        "🎉 ¡Hoy 2x1 en todos los helados!";
+    }
+  </script>
+
+</body>
+</html>
